@@ -1,38 +1,42 @@
-# Freshdesk Userscripts
+# Tampermonkey Userscripts
 
-A small collection of Tampermonkey userscripts that improve the Freshdesk agent
-UI. They target Freshdesk's standard agent interface, so they work on any
-`*.freshdesk.com` instance.
+A small collection of Tampermonkey userscripts that smooth over rough edges in
+various web UIs. Each script is self-contained and independent — install only
+the ones you want.
 
 ## Scripts
 
-- **Freshdesk Search Box** — restyles the top-bar Search control to read as a
-  real text-entry box (larger, left-aligned, blinking caret) in the page's own
-  colors.
-- **Freshdesk External Reply Color** — colors replies from external users
-  (purple) so they're distinct from internal private notes (which stay peach).
+### Freshdesk
+
+Work on any `*.freshdesk.com` instance.
+
+- **Freshdesk Search Box**
+  ([install](https://raw.githubusercontent.com/kcgthb/tampermonkey-userscripts/main/freshdesk-search-box.user.js))
+  — restyles the top-bar Search control to read as a real text-entry box
+  (larger, left-aligned, blinking caret) in the page's own colors.
+- **Freshdesk External Reply Color**
+  ([install](https://raw.githubusercontent.com/kcgthb/tampermonkey-userscripts/main/freshdesk-external-reply-color.user.js))
+  — colors replies from external users (purple) so they're distinct from
+  internal private notes (which stay peach).
 
 ## Installation
 
 1. Install the [Tampermonkey](https://www.tampermonkey.net/) browser extension.
-2. Click the install link for the script(s) you want:
-   - [Freshdesk Search Box](https://raw.githubusercontent.com/kcgthb/tampermonkey-userscripts/main/freshdesk-search-box.user.js)
-   - [Freshdesk External Reply Color](https://raw.githubusercontent.com/kcgthb/tampermonkey-userscripts/main/freshdesk-external-reply-color.user.js)
-3. Click **Install** on the Tampermonkey prompt, then reload any Freshdesk tab.
+2. Click the **install** link next to any script above.
+3. Click **Install** on the Tampermonkey prompt, then reload the target page.
 
 Each script is independent. Updates are delivered automatically via `@updateURL`.
 
 ## Notes / troubleshooting
 
-- Scripts target Freshdesk's internal CSS class names
-  (`.quick-search-trigger`, `.ticket-details__privatenote`,
-  `.ticket-details__requestor`). A Freshdesk UI change may require updating them.
-- `@match` is scoped to `*.freshdesk.com`. If your helpdesk uses a custom
-  domain, add it to the `@match` line.
+- Scripts target sites' internal CSS class names, which can change without
+  notice. If a script stops working, the selectors likely need refreshing.
+- Each script's `@match` line controls where it runs. To use a script on a
+  custom domain (e.g. a white-labelled helpdesk), add that domain to `@match`.
 
 ## Contributing
 
-Bump `@version` when changing a script so Tampermonkey picks up updates.
+Bump a script's `@version` when changing it so Tampermonkey picks up the update.
 
 ## License
 
