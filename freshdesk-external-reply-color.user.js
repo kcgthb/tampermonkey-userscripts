@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Freshdesk External Reply Color
 // @namespace    https://github.com/kcgthb/tampermonkey-userscripts
-// @version      1.0.0
+// @version      1.0.1
 // @description  Distinguishes external-user replies (purple) from genuine private notes (unchanged peach) in ticket threads.
 // @author       kcgthb
 // @license      GPL-3.0-or-later
